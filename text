@@ -1,0 +1,45 @@
+def she_hello():
+	task = input('hello user name')
+	task_info = {'task':task, 'commpleted': False}
+	tasks.append(task_info)
+	print('Task added to the list successfuly')
+	
+
+def sha_hello():
+	list =[task for task in tasks if task['commpleted']== False]
+	
+	for i , task in enumerate(list):
+		print(f"{i+1}- {task['task']}")
+		print('-'*50)
+		
+	numpr= int(input('entry the task to complet'))
+	list[numpr -1]['commpleted']= True	
+	
+	print(tasks)
+	
+def she_Myapp():
+	pass
+
+massage = '''
+1 - mark task as complet
+2 - vile taske
+3 - exit
+'''
+
+tasks =[]  
+
+
+while True:
+	print(massage)
+	num = input('Your name pasword : ')
+	
+	if num == '1':
+		she_hello()
+	elif num == '2':
+		sha_hello()
+	elif num == '3':
+		she_Myapp()
+	elif num == '4':
+		break		
+	else:
+		print('erorr')			
